@@ -18,7 +18,6 @@ namespace DbTrinkingTest
         }
         public override int SaveChanges()
         {
-
             var rowsChanged = ChangeTracker.Entries();
             var dbEntityEntries = rowsChanged as IList<DbEntityEntry> ?? rowsChanged.ToList();
             if (rowsChanged == null || !dbEntityEntries.Any())
